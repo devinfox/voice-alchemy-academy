@@ -1,0 +1,100 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.calendar-header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.calendar-header button:hover {
+  color: #1f1837;
+}
+
+.calendar-header .month-year {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.weekday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+}
+
+.calendar-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #1f1837;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.calendar-date:hover {
+  background-color: #d0bf86;
+  cursor: pointer;
+}
+
+.calendar-date.other-month {
+  color: #ccc;
+}
+
+.calendar-date.today {
+  background-color: #1f1837;
+  color: #d0bf86;
+}
+
+.calendar-date.today:hover {
+  background-color: #d0bf86;
+  color: #1f1837;
+}
+
+.next-arrow {
+  color: white !important;
+}

@@ -1,0 +1,32 @@
+.sticky-footer-toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #1f1837;
+  color: white;
+}
+
+.icon-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 32px;
+}
+
+.sticky-footer-toolbar .icon-column svg {
+  color: white;
+}
+
+.sticky-footer-toolbar .icon-column:hover {
+  color: #d0bf86;
+}
+
+.sticky-footer-toolbar .icon-column.clicked {
+  color: #d0bf86;
+}
+
