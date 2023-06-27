@@ -3,9 +3,8 @@ import Button from '../components/Button/Button';
 import DictionaryPopup from '../components/DictionaryPopup/DictionaryPopup';
 import EarTrainingApp from '../components/EarTrainingApp';
 import Placeholder from '../components/Placeholder/Placeholder';
-import VideoLibrary from '../components/VideoLibrary/VideoLibrary';
 import GoalsTodosPopup from '../components/GoalsTodosPopup/GoalsTodosPopup';
-
+import VideoLibrary from '../components/VideoLibrary/VideoLibrary';
 
 function HomePage() {
   const [isGoalsTodosOpen, setIsGoalsTodosOpen] = useState(false);
@@ -38,6 +37,26 @@ function HomePage() {
     setIsGoalsTodosOpen(false);
   };
 
+  // Video data
+  const videos = [
+    {
+      id: 1,
+      title: 'Video 1',
+      source: '/Users/devinfox/Desktop/voice-alchemy-app/src/videos/A005_C029_0925TO_001.mp4',
+    },
+    {
+      id: 2,
+      title: 'Video 2',
+      source: '/Users/devinfox/Desktop/voice-alchemy-app/src/videos/A005_C029_0925TO_001.mp4',
+    },
+    {
+      id: 3,
+      title: 'Video 3',
+      source: '/Users/devinfox/Desktop/voice-alchemy-app/src/videos/A005_C029_0925TO_001.mp4',
+    },
+    // Add more videos as needed
+  ];
+
   return (
     <div className="home-page-container">
       <div className="top-part-container">
@@ -58,11 +77,10 @@ function HomePage() {
         </div>
       </div>
       {isDictionaryOpen && <DictionaryPopup onClose={handleCloseDictionary} />}
-      {isVideoLibraryOpen && <VideoLibrary onClose={handleCloseVideoLibrary} />}
+      {isVideoLibraryOpen && <VideoLibrary videos={videos} onClose={handleCloseVideoLibrary} />}
       {isGoalsTodosOpen && <GoalsTodosPopup onClose={handleCloseGoalsTodos} />}
     </div>
   );
-  
 }
 
 export default HomePage;
